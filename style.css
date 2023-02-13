@@ -148,8 +148,12 @@ body {
   border-radius: 30px;
   margin: 10px;
 }
+.related a {
+  text-decoration: none !important;
+}
 .related_searches .related i {
   font-size: 20px;
+  color : #202124;
 }
 .related_searches .related p {
   font-weight: bold;
