@@ -2,6 +2,14 @@
 
 class Engine
 {
+    public $api_key = "";
+
+    public function __construct()
+    {
+        include("config.php");
+        $this->api_key = $api_key;
+    }
+
     public function searchWeb($q, $pg = 1)
     {
 
@@ -18,7 +26,7 @@ class Engine
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "X-RapidAPI-Host: contextualwebsearch-websearch-v1.p.rapidapi.com",
-                "X-RapidAPI-Key: e5961b5f84msh9b49aa1a56226fcp197d76jsn3e4e79e41928"
+                "X-RapidAPI-Key: ".$this->api_key
             ],
         ]);
 
@@ -48,7 +56,7 @@ class Engine
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "X-RapidAPI-Host: contextualwebsearch-websearch-v1.p.rapidapi.com",
-                "X-RapidAPI-Key: e5961b5f84msh9b49aa1a56226fcp197d76jsn3e4e79e41928"
+                "X-RapidAPI-Key: ".$this->api_key
             ],
         ]);
 
@@ -78,7 +86,7 @@ class Engine
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "X-RapidAPI-Host: contextualwebsearch-websearch-v1.p.rapidapi.com",
-                "X-RapidAPI-Key: e5961b5f84msh9b49aa1a56226fcp197d76jsn3e4e79e41928"
+                "X-RapidAPI-Key: ".$this->api_key
             ],
         ]);
 
